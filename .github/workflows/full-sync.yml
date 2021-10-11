@@ -1,7 +1,9 @@
 name: FullSync Notion Star
 
 on:
-  workflow_dispatch:
+  push:
+  schedule:
+    - cron: '0 23 * * *'
 
 jobs:
   full-sync:
