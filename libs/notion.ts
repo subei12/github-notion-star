@@ -111,6 +111,16 @@ export class Notion {
                         },
                     ],
                 },
+                'Primary Language': {
+                    type: 'select',
+                    select: {
+                        name: repo?.primaryLanguage?.name || 'null',
+                    },
+                },
+                'Repository Topics': {
+                    type: 'multi_select',
+                    multi_select: repo.repositoryTopics || [],
+                },
                 'Starred At': {
                     type: 'date',
                     date: {
